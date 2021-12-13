@@ -2,11 +2,13 @@ version: 2
 
 sources:
   - name: snowflake_jaffle_shop
+    description: this is a database from snowflake
     database: raw
     schema: jaffle_shop
     tables:
       - name: customers
       - name: orders
+        description: this is a table of orders from our customers
         loaded_at_field: _etl_loaded_at
         freshness: 
           warn_after: {count: 6, period: hour}
